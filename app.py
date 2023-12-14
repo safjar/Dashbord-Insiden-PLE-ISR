@@ -1,6 +1,7 @@
 import streamlit as st
 from functions_button import st_button, load_css
 import pandas as pd
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 
@@ -103,12 +104,16 @@ def display_data():
         st.write(avg_age_by_region)
 
     # Visualize the 3 top types of injuries using Matplotlib
-    
     st.subheader("Presentase Jenis Luka")
     injury_counts = data['type_of_injury'].value_counts()
     #injury_counts = injury_counts[injury_counts > 5]
     top_3_counts = injury_counts.nlargest(3)
-    st.bar_chart(top_3_counts)
+    top_3_labels = top_3_counts.index.to_list()
+    fig, ax = plt.subplots()
+    ax.pie(top_3_counts, labels=top_3_labels, autopct='%1.1f%%')
+    ax.set_aspect('equal')
+    st.pyplot(fig)
+    
 
     # Data filtering example: Incidents in a specific region with specific characteristics
     region = 'West Bank'  
