@@ -1,0 +1,5 @@
+pandas = 2.0.2
+streamlit
+seaborn
+mathplotlib
+pip 23.3.1
