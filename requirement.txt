@@ -2,3 +2,4 @@ pandas == 2.0.2
 streamlit
 seaborn
 pip == 23.3.1
+matplotlib.pyplot
