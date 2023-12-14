@@ -1,5 +1,5 @@
 pandas = 2.0.2
 streamlit
 seaborn
-mathplotlib
+matplotlib
 pip 23.3.1
