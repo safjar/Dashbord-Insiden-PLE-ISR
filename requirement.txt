@@ -1,5 +1,6 @@
-pandas == 2.0.2
+pandas 
+matplotlib
 streamlit
 seaborn
-pip == 23.3.1
-matplotlib.pyplot
+pip
+
